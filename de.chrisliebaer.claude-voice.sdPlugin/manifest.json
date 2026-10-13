@@ -1,0 +1,48 @@
+{
+	"$schema": "https://schemas.elgato.com/streamdeck/plugins/manifest.json",
+	"Name": "Claude Voice",
+	"Version": "0.1.0.0",
+	"Author": "Chrisliebär",
+	"Actions": [
+		{
+			"Name": "Push to Talk",
+			"UUID": "de.chrisliebaer.claude-voice.push-to-talk",
+			"Icon": "imgs/actions/push-to-talk/icon",
+			"Tooltip": "Hold to dictate into a Claude Code session, even while its terminal is not focused. Tap to submit.",
+			"PropertyInspectorPath": "ui/push-to-talk.html",
+			"Controllers": ["Keypad"],
+			"DisableAutomaticStates": true,
+			"States": [
+				{
+					"Name": "Idle",
+					"Image": "imgs/actions/push-to-talk/idle",
+					"TitleAlignment": "bottom"
+				},
+				{
+					"Name": "Talking",
+					"Image": "imgs/actions/push-to-talk/talking",
+					"TitleAlignment": "bottom"
+				}
+			]
+		}
+	],
+	"Category": "Claude Voice",
+	"CategoryIcon": "imgs/plugin/category-icon",
+	"CodePath": "bin/plugin.js",
+	"Description": "Push-to-talk for Claude Code voice dictation that works while the terminal is not focused.",
+	"Icon": "imgs/plugin/marketplace",
+	"SDKVersion": 3,
+	"Software": {
+		"MinimumVersion": "7.1"
+	},
+	"OS": [
+		{
+			"Platform": "windows",
+			"MinimumVersion": "10"
+		}
+	],
+	"Nodejs": {
+		"Version": "24"
+	},
+	"UUID": "de.chrisliebaer.claude-voice"
+}

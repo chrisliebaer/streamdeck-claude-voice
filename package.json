@@ -1,0 +1,26 @@
+{
+	"name": "streamdeck-claude-voice",
+	"version": "0.1.0",
+	"description": "Stream Deck plugin that triggers Claude Code voice dictation in a session that does not have keyboard focus.",
+	"license": "MIT",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"build": "tsc",
+		"icons": "node scripts/generate-icons.mjs",
+		"sounds": "node scripts/generate-sounds.mjs",
+		"package": "npm run build && node scripts/package.mjs",
+		"validate": "streamdeck validate de.chrisliebaer.claude-voice.sdPlugin",
+		"link": "streamdeck link de.chrisliebaer.claude-voice.sdPlugin",
+		"restart": "streamdeck restart de.chrisliebaer.claude-voice"
+	},
+	"dependencies": {
+		"@elgato/streamdeck": "^3.0.2",
+		"koffi": "^3.3.3"
+	},
+	"devDependencies": {
+		"@elgato/cli": "^1.10.2",
+		"@types/node": "~24.1.0",
+		"typescript": "^5.9.0"
+	}
+}
